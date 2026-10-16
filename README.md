@@ -26,3 +26,9 @@ Open http://127.0.0.1:8000/docs to test.
 - Built GET /, GET /health and POST /predict endpoints
 - Tested endpoints using Swagger UI and PowerShell
 - Documented the API in README
+## Week 2 Progress
+- Added scikit-learn model (LogisticRegression) in models.py
+- Added /train endpoint using pandas to load data/sample.csv
+- Added /predict endpoint with pydantic validation and numpy
+- Added error handling and logging for training and prediction
+- Tested endpoints using Swagger UI
