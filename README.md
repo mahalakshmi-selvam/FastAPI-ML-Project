@@ -49,3 +49,10 @@ https://fastapi-ml-project-hxnj.onrender.com/docs
 - Added Prometheus metrics at /metrics (can be visualized with Grafana)
 - Added automated tests (pytest) and GitHub Actions
 - Deployed on Render with automatic HTTPS and auto-deploy on push
+## Week 5 Progress
+- Project structure with separate models/, routes/, utils/ folders
+- Prediction endpoint with pydantic validation and model loading
+- OAuth2 password flow with JWT tokens
+- Role-based access control: admin can train/upload, users can predict/evaluate
+- HTTPS enabled through Render deployment
+- Tested authentication and authorization using Swagger UI and pytest
