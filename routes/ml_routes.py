@@ -1,6 +1,6 @@
 import logging
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 
 from models import ml_model
 from schemas import (
@@ -10,12 +10,17 @@ from schemas import (
     TrainRequest,
     TrainResponse,
 )
+from utils.auth import require_admin
 
 logger = logging.getLogger("ml_api")
 router = APIRouter(tags=["ML"])
 
 
-@router.post("/train", response_model=TrainResponse)
+@router.post(
+    "/train",
+    response_model=TrainResponse,
+    dependencies=[Depends(require_admin)],
+)
 def train(req: TrainRequest = TrainRequest()):
     try:
         result = ml_model.train_model(req.test_size, req.random_state)

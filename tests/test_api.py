@@ -40,3 +40,9 @@ def test_admin_train_and_predict():
     )
     assert r.status_code == 200
     assert r.json()["passed"] is True
+    
+    
+def test_user_cannot_train():
+    token = get_token("user", "user123")
+    r = client.post("/train", headers=auth(token))
+    assert r.status_code == 403
