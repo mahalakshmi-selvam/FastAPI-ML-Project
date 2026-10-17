@@ -38,3 +38,14 @@ Open http://127.0.0.1:8000/docs to test.
 - Built POST /train, POST /predict and GET /evaluate endpoints
 - Added train/test split and metrics (accuracy, precision, recall, F1)
 - Added error handling and logging
+## Live Demo
+https://fastapi-ml-project-hxnj.onrender.com/docs
+
+## Week 4 Progress
+- Added CSV dataset upload endpoint (POST /upload)
+- Added hyperparameter tuning with GridSearchCV
+- Added JWT login with admin/user roles and role-based access
+- Added rate limiting and IP blocking
+- Added Prometheus metrics at /metrics (can be visualized with Grafana)
+- Added automated tests (pytest) and GitHub Actions
+- Deployed on Render with automatic HTTPS and auto-deploy on push
