@@ -20,12 +20,15 @@ def hash_password(password: str) -> str:
     ).hex()
 
 
+ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "admin")
+USER_USERNAME = os.getenv("USER_USERNAME", "user")
+
 USERS = {
-    "admin": {
+    ADMIN_USERNAME: {
         "password": hash_password(os.getenv("ADMIN_PASSWORD", "admin123")),
         "role": "admin",
     },
-    "user": {
+    USER_USERNAME: {
         "password": hash_password(os.getenv("USER_PASSWORD", "user123")),
         "role": "user",
     },
