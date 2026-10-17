@@ -12,6 +12,8 @@ class TrainResponse(BaseModel):
     train_rows: int
     test_rows: int
     test_accuracy: float
+    best_C: float
+    cv_score: float
 
 
 class PredictRequest(BaseModel):
