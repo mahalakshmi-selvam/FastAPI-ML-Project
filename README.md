@@ -32,3 +32,9 @@ Open http://127.0.0.1:8000/docs to test.
 - Added /predict endpoint with pydantic validation and numpy
 - Added error handling and logging for training and prediction
 - Tested endpoints using Swagger UI
+## Week 3 Progress
+- Restructured project into models/, routes/, utils/ folders
+- Added schemas.py with pydantic request/response models
+- Built POST /train, POST /predict and GET /evaluate endpoints
+- Added train/test split and metrics (accuracy, precision, recall, F1)
+- Added error handling and logging
